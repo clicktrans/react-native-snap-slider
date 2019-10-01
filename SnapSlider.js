@@ -1,5 +1,6 @@
 'use strict';
 
+import Slider from '@react-native-community/slider'
 var React = require('react');
 var ReactNative = require('react-native');
 var PropTypes = require('prop-types');
@@ -7,7 +8,6 @@ var createReactClass = require('create-react-class');
 
 var {
     StyleSheet,
-    Slider,
     Text,
     View,
     ViewPropTypes
@@ -76,18 +76,7 @@ var SnapSlider = createReactClass({
         );
 
     },
-    /*
-    componentWillUpdate() {
-        //get the width for all items
-        var iw = [];
-        for (var i = 0; i < this.props.items.length; i++) {
-            var node = eval('this.refs.t' + i);
-            node.measure(function (ox, oy, width, height, px, py) {
-                iw.push(width);
-            });
-        }
-    },
-    */
+   
     _getItemWidth: function (x) {
         var width = x.nativeEvent.layout.width;
         var itemWidth = this.state.itemWidth;
